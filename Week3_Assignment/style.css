@@ -1,0 +1,26 @@
+body {
+    Font-family: Georgia, serif;
+    Font-size: 1.6em;
+    line-height: 1.6;
+}
+
+header h1, h2, h3 {
+    margin: 1.6em;
+    letter-spacing: 0em;
+}
+
+header p {
+    margin: 1.6em;
+    letter-spacing: 0em;
+}
+
+p cite {
+    font-family: Geneva, sans-serif;
+    color: #0004ff;
+}
+
+p Q {
+    font-family: quicksand, verdana, sans-serif;
+    color: #0004ff;
+    background-color: #f0f0f0;
+}
