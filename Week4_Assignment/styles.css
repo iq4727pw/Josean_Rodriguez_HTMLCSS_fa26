@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    color: gray;
+}
+
+
+:link {
+    color:blue;
+}/*unvisited*/ 
+
+:visited {
+    color:green;
+} 
+
+:hover {
+    color:brown;
+    background-color: black;
+} 
+:active {
+    color:red;
+}
+:focus {
+    color: yellow;
+    background-color: black;
+}
