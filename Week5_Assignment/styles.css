@@ -1,0 +1,41 @@
+body {
+    background-color: #ffffff;
+    Color: black;
+}
+
+h1 {
+    color:red;
+    font-family: Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+p {
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+h2 {
+    color: red;
+    border-bottom: 2px solid black;
+}
+
+h3 {
+    color: red;
+    border-bottom: 2px solid black;
+}
+
+ol {
+    background-color: lightgray;
+    padding: 2em;
+    border-left: 5px solid gray;
+}
+
+ul {
+    background-color: lightgray;
+    padding: 2em;
+    border-left: 5px solid gray;
+}
+
+footer {
+    color: red;
+}
