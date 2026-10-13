@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notification Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div id="settings-panel" aria-labelledby="settings-title">
+      <svg class="notification-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+        <path d="M10 21h4"/>
+      </svg>
+      <h2 id="settings-title">Notification Settings</h2>
+      <p class="intro">Choose how you stay in the loop.</p>
+
+      <div class="setting">
+        <label id="email-label">Email notifications</label>
+        <a href="#email" id="email" class="active" role="switch" aria-checked="true" aria-labelledby="email-label"><span>On</span></a>
+      </div>
+      <div class="setting">
+        <label id="push-label">Push notifications</label>
+        <a href="#push" id="push" role="switch" aria-checked="false" aria-labelledby="push-label"><span>Off</span></a>
+      </div>
+      <div class="setting">
+        <label id="updates-label">Product updates</label>
+        <a href="#updates" id="updates" role="switch" aria-checked="false" aria-labelledby="updates-label"><span>Off</span></a>
+      </div>
+
+      <div class="privacy-row">
+        <a href="https://www.mozilla.org/en-US/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      </div>
+    </div>
+  </main>
+  <script>
+    // Keep the visual state and accessible switch state in sync.
+    document.querySelectorAll('.setting a').forEach(toggle => {
+      function changeState(event) {
+        event.preventDefault();
+        const enabled = toggle.classList.toggle('active');
+        toggle.setAttribute('aria-checked', String(enabled));
+        toggle.querySelector('span').textContent = enabled ? 'On' : 'Off';
+      }
+      toggle.addEventListener('click', changeState);
+      toggle.addEventListener('keydown', event => {
+        if (event.key === ' ') changeState(event);
+      });
+    });
+  </script>
+</body>
+</html>

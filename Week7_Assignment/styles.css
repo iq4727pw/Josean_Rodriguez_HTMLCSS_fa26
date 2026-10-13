@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #20382f;
+  background: #edf2ee;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+}
+
+/* ID selector: the main settings container. */
+#settings-panel {
+  width: 100%;
+  max-width: 520px;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #dce5df;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px #20382f0d;
+}
+
+.notification-icon {
+  color: #287653;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  margin: 0 0 12px;
+}
+
+.intro {
+  margin: 0 0 28px;
+  color: #617169;
+  line-height: 1.6;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #e6ece8;
+}
+
+.setting label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Combined selector: base appearance of the anchor toggles. */
+.setting a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 10px;
+  min-width: 88px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #b8c8bf;
+  border-radius: 24px;
+  background: #e9efeb;
+  color: #45574c;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.setting a::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.setting a.active {
+  flex-direction: row-reverse;
+  color: #ffffff;
+  background: #287653;
+  border-color: #287653;
+}
+
+.setting a:hover {
+  background: #d5e1d9;
+  box-shadow: 0 3px 8px #20382f1a;
+}
+
+.setting a.active:hover {
+  background: #1c5e40;
+}
+
+.setting a:focus {
+  outline: 3px solid #946519;
+  outline-offset: 4px;
+}
+
+.privacy-row {
+  border-top: 1px solid #e6ece8;
+  padding-top: 24px;
+  margin-top: 4px;
+}
+
+.privacy-row a {
+  color: #37644d;
+  font-size: 14px;
+  text-underline-offset: 4px;
+}
+
+/* Attribute selector and pseudo-element mark links opening a new tab. */
+a[target="_blank"]::after {
+  content: ' ↗';
+  display: inline-block;
+  margin-left: 3px;
+}
+
+@media (max-width: 600px) {
+  #settings-panel {
+    padding: 28px 24px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .setting {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .setting a {
+    transition: none;
+  }
+}
