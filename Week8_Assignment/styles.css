@@ -1,0 +1,20 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.product-card {
+  background-color: #f5f5f5;
+  border: 2px solid #050505;
+  border-radius: 8px;
+  padding: 25px;
+  width: 350px;
+  text-align: center;
+  margin: 20px auto;
+  margin-vertical: 20px 15px;
+  margin-horizontal: 15px 10px;
+}
+
+:hover {
+    box-sizing: border-box;
+    border-color: #ff0404;
+}
