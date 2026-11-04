@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fdfcfc;
+  --text-color: #00030a;
+  --primary-color: #a1a3a5;
+  --border-color: #0c0c0c;
+  font-family: Arial, sans-serif;
+}
+
+body main, header, footer {
+  background-size: 50%;
+  background-image: url("old-san-juan.jpg");
+  background-repeat: repeat-x;
+}
+h2 {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin: 10px 0;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    align-items: center;
+    text-align: center;
+}
+
+ :visited {
+    color:green;
+ }
+
+ :hover {
+    color:brown;
+    background-color: rgb(194, 242, 248);
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    } 
+:active {
+    color:red;
+}
+:focus {
+    color: yellow;
+    background-color: rgb(247, 202, 202);
+}
+
+body h1, h2, p, article, main, header, footer, {   
+  background-color: white;
+  color: rgb(255, 255, 255);
+ 
+}
+
+body, h1, h2, p {   
+   margin: 5px;
+   padding: 7;
+   margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 10px;
+}
+
+header{
+    background-image: url("old-san-juan.jpg");
+    background-repeat: repeat-x;
+    background-size: 50%;
+    margin: 1.6em;
+    letter-spacing: 0em;
+    background-color: #f4f4f4;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+
+article {
+  overflow: hidden;
+}
+
+img[alt] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 8px;
+    width: 350px;
+}
+
+picture {
+  display: block;
+  margin: 0 auto;
+  max-width: 42%;
+  height: auto;
+  border-inline-width: 2px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-style: ridge;
+  border-width: 15px;
+  box-shadow: 0 4px 8px rgb(3, 3, 3);
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 8px;
+  width: 350px;
+}
+
+.project-image:hover {
+  filter: grayscale(100%);
+  transform: scale(1.05);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-image {
+    transition: none;
+  }
+}
+footer {
+  color: var(--text-color);
+}
+/*mobile styles: 0px to 480px*/
+@media (min-width: 0px) and (max-width: 480px) {
+}
+
+/*Tablets styles: 481px to 768px*/
+@media (min-width: 481px) and (max-width: 768px) {
+}
+
+/*Desktop styles: 769px and up*/
+@media (min-width: 769px) {
+} 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1e1e1e;
+    --text-color: #f5f5f5;
+    --primary-color: #3498db;
+    --border-color: #555;
+  }
+}
